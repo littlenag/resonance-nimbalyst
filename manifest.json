@@ -1,0 +1,35 @@
+{
+  "id": "io.github.littlenag.resonance",
+  "name": "Resonance",
+  "version": "0.1.0",
+  "description": "Resonance's spec, change log, diagnostics and logs for this workspace, in a Nimbalyst panel",
+  "author": "littlenag",
+  "main": "dist/index.js",
+  "styles": "dist/index.css",
+  "apiVersion": "1.0.0",
+  "permissions": {
+    "filesystem": true
+  },
+  "contributions": {
+    "panels": [
+      {
+        "id": "spec",
+        "title": "Resonance",
+        "icon": "account_tree",
+        "placement": "fullscreen",
+        "tooltip": "Resonance: this workspace's spec, change log, diagnostics and logs"
+      }
+    ],
+    "configuration": {
+      "title": "Resonance",
+      "properties": {
+        "binaryPath": {
+          "type": "string",
+          "default": "resonance",
+          "description": "The resonance command, or its full path. Apps started from the Dock may not see your shell's PATH; if left as \"resonance\" and not found, ~/.cargo/bin/resonance is tried.",
+          "scope": "user"
+        }
+      }
+    }
+  }
+}
